@@ -1,0 +1,301 @@
+■ Задания, в которых необходимо использовать WHILE .
+1. Вывести # столько раз, сколько указал пользователь.
+let x = prompt ("Enter number");
+while (x>0){
+alert ('#');
+x--;
+}
+let x = prompt ("Enter number");
+let str = ""
+while (x>0){
+str+='#';
+x--;
+}
+alert(str)
+2. Пользователь ввел число, а на экран вывелись все числа от введенного до 0.
+let x = prompt ("Enter number");
+while (x>-1){
+alert (x);
+x--;
+}
+3. Запросить число и степень. Возвести число в указанную степень и вывести результат.
+let x = prompt("Enter number");
+let y = prompt ("Enter degree of");
+let z = x;
+
+while (y > 1){
+	z *=x;
+  y--;
+}
+
+alert(z);
+
+через for
+
+let x = prompt("Enter number");
+let y = prompt ("Enter degree of");
+let z = 1;
+for ( i = 1; i <= y; i++) { 
+z *= x; 
+}
+alert(z);
+4. Запросить 2 числа и найти все общие делители.
+5. Посчитать факториал введенного пользователем числа.
+let x = prompt("Enter number");
+let y = prompt ("Enter degree of");
+let z = x;
+while (y > 1){
+z *=x;
+  y--;
+}
+
+alert(z);
+
+let x = prompt("Enter number");
+let y = prompt ("Enter degree of");
+let z = 1;
+for ( i = 1; i <= y; i++) { 
+z *= x;
+ }
+alert(z);
+■ Задания, в которых необходимо использовать DO WHILE .
+6. Предлагать пользователю решить пример 2 + 2 * 2 до тех пор, пока он не решит его правильно.
+let num;
+do {
+  num = prompt("Сколько будет 2+2*2?", 0);
+} while (num != 8); 
+7. Делить число 1000 на 2 до тех пор, пока не получится число меньше 50. Вывести это число и сколько делений произвели.
+■ Задания, в которых необходимо использовать FOR .
+8. Вывести все числа от 1 до 100, которые кратные указанному пользователем числу.
+let c = prompt ("Enter number");
+for (let i = 1; i <= 100; i++) {
+  if (i % c == 0){
+    alert(i)
+  }
+}
+
+9. Вывести каждый 4-й элемент из указанного пользователем диапазона. Пользователь указывает минимальное и максимальное значения диапазона.
+let a = prompt ("Enter min number");
+let b = prompt ("Enter max number");
+for (let i = Number(a)+3; i <= b; i+=4) {
+alert(i);
+}
+10. Запросить число и проверить, простое ли оно. Простое число делится без остатка только на себя и на единицу.
+let n = prompt ("Enter number");
+nextPrime:
+for (let i = 2; i <= n; i++) { 
+  for (let j = 2; j < i; j++) { 
+    if (i % j == 0) continue nextPrime; 
+  }
+  alert( i ); 
+}
+Вам необходимо самостоятельно решить, для какого задания какой цикл лучше использовать: WHILE , DO WHILE или FOR .
+11. Подсчитать сумму всех чисел в заданном пользователем диапазоне.
+var a = Number(prompt("Enter first number"));
+var n = Number(prompt("Enter last number"));
+var sum = 0;
+ 
+while(a <= n){       
+       sum+=a;  
+       a++;
+    }
+ 
+alert(sum)
+12. Запросить 2 числа и найти только наибольший общий делитель.
+13. Запросить у пользователя число и вывести все делители этого числа.
+let n = prompt ("");
+let i = 0;
+while (i++ <= n){
+if (n % i == 0)
+{
+alert(i);
+}
+}
+
+14. Определить количество цифр в введенном числе.
+let n = prompt ("Enter number");
+let q = 0;
+for (i = 1; n / i >= 1; i *= 10) {
+q ++;
+}
+alert(q); 
+15. Запросить у пользователя 10 чисел и подсчитать, сколько он ввел положительных, отрицательных и нулей. При этом также посчитать, сколько четных и нечетных. Вывести статистику на экран. Учтите, что достаточно одной переменной (не 10) для ввода чисел пользователем.
+let N;
+let Q1 = 0;
+let Q2 = 0;
+let Q3 = 0;
+let x = 0;
+let y = 0;
+ 
+for (i = 0; i < 10; i++) {
+  N = prompt(`введите ${i+1} число: `, );
+   if (N > 0) {
+    Q1++; 
+  } else if 
+    (N < 0) {
+    Q2++; 
+  } else if
+    (N == 0) {
+    Q3++; 
+  } else if 
+  (N % 2 == 0){
+  x++
+  } else if 
+  (N % 2 != 0){
+  y++
+  }
+}
+
+
+if (Q1 > 0) {
+  alert("Количество положительных: " + Q1);
+} else {
+  alert("Положительных чисел нет");
+}
+ if (Q2 > 0) {
+  alert("Количество отрицательных: " + Q2);
+} else {
+  alert("Отрицательных чисел нет");
+
+ if (Q3 > 0) {
+  alert("Нулей введено: " + Q3);
+} else {
+  alert("Нулей нет");
+}
+if (N % 2 == 0) {
+alert("Количество четных: " + x);
+} else {
+alert("Четных нет");
+}
+if (N % 2 != 0) {
+alert("Количество нечетных: " + y);
+} else {
+alert("Нечетных нет");
+}
+}
+16. Зациклить калькулятор. Запросить у пользователя 2 числа и знак, решить пример, вывести результат и спросить, хочет ли он решить еще один пример. И так до тех пор, пока пользователь не откажется.
+do {
+  let firstLetter = Number(prompt("Введите 1е число!"));
+  let secondLetter = Number(prompt("Введите 2е число!"));
+  let sign = prompt("знак");
+  let result;
+
+  switch (sign){
+    case("+"):
+      result=firstLetter+secondLetter;
+      break;
+    case("-"):
+      result=firstLetter-secondLetter;
+      break;  
+    case("*"):
+      result=firstLetter*secondLetter;
+      break;
+    case("/"):
+      result=firstLetter/secondLetter;
+      break;
+    case("%"):
+      result=firstLetter%secondLetter;
+      break;   
+  }
+  alert(result);
+ } while (confirm("Хотите продолить?"))
+
+
+do {
+  let firstLetter = Number(prompt("Введите 1е число!"));
+  let secondLetter = Number(prompt("Введите 2е число!"));
+  let sign = prompt("знак");
+  let result;
+
+  alert(eval(firstLetter + sign + secondLetter))
+ } while (confirm("Хотите продолжить?"))
+17. Запросить у пользователя число и на сколько цифр его сдвинуть. Сдвинуть цифры числа и вывести результат (если число 123456 сдвинуть на 2 цифры, то получится 345612).
+let str = prompt("Введите число!");
+let k = prompt("На сколько цифр его сдвинуть?");
+ console.log(str.slice(k) + str.slice(0, k));
+
+let str = prompt("Введите число!");
+let n = prompt("На сколько цифр его сдвинуть?");
+ 
+let arr = str.split(""); 
+let b = [];
+console.log(arr);
+
+for (i=n; i<arr.length; i++){
+b.push(arr[i]);
+}
+
+console.log(arr.length);
+
+for (i=0; i<n; i++){
+b.push(arr[i]);
+}
+
+console.log(b);
+
+18. Зациклить вывод дней недели таким образом: «День недели. Хотите увидеть следующий день?» и так до тех пор, пока пользователь нажимает OK.
+const days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
+let currDay = 0;
+
+while (confirm(${days[currDay]}. Хотите увидеть следующий день?)) {
+  currDay = (currDay + 1) % days.length;
+  console.log(currDay);
+}
+
+const days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
+
+for (i=false, currDay=0; i!=confirm(${days[currDay]}. Хотите увидеть следующий день?);){
+currDay = (currDay + 1) % days.length;
+}
+19. Вывести таблицу умножения для всех чисел от 2 до 9. Каждое число необходимо умножить на числа от 1 до 10.
+let matrix = []
+for(let i=2; i<10; i++){
+  let row = []
+  for(let j=1; j<11; j++){
+    row.push(i*j);
+  }
+  matrix.push(row.join(" , "))
+}
+alert(matrix.join("\n"))
+
+
+
+
+
+let matrix = []
+for(let i=9; i>2;i--){
+  let row = []
+  for(let j=10; j>1; j--){
+    row.push(i*j);
+  }
+  matrix.push(row.join(" , "))
+}
+alert(matrix.join("\n"))
+
+
+let matrix = []
+for(let i=9; i>2;i--){
+  let row = []
+  for(let j=10; j>1; j--){
+    row.push(i*j);
+  }
+  matrix.push(row.join(" , "))
+}
+alert(matrix.join("\n"))
+
+
+20. Игра «Угадай число». Предложить пользователю загадать число от 0 до 100 и отгадать его следующим способом: каждую итерацию цикла делите диапазон чисел пополам, записываете результат в N и спрашиваете у пользователя «Ваше число > N, < N или == N?». В зависимости от того что указал пользователь, уменьшаете диапазон. Начальный диапазон от 0 до 100, поделили пополам и получили 50. Если пользователь указал, что его число > 50, то изменили диапазон на от 51 до 100. И так до тех пор, пока пользователь не выберет == N.
+let N = 0;
+let M = 100;
+while(true){
+  let medium = Math.round((N + M)/2);
+  let Q = prompt (Ваше число > ${medium}, < ${medium} или == ${medium}?)
+  if(Q == "=="){
+    alert(Ваше число ${medium});
+    break;
+  } else if (Q == ">"){
+    N = medium;
+  } else if (Q == "<"){
+    M = medium - 1;
+  }
+}
